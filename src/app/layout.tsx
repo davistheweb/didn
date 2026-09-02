@@ -30,10 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="relative flex w-full max-w-506 flex-col items-center justify-center overflow-x-hidde">
-        {children}
+      <body className="relative flex w-full max-w-506 flex-col items-center justify-center overflow-x-hidden">
         <QuickContact />
         <Navbar />
+        {children}
       </body>
     </html>
   );

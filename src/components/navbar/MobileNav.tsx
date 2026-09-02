@@ -32,7 +32,7 @@ export const MobileNav: React.FC<{
   return (
     <AnimatePresence>
       {isMobileMenuIsOpen && (
-        <div className="fixed top-35 z-40 h-fit w-full bg-white shadow-sm lg:hidden">
+        <div className="fixed top-20 z-40 h-fit w-full bg-white shadow-sm lg:hidden">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

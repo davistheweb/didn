@@ -24,4 +24,16 @@ body {
   .bg-custom-blue {
     background-color: var(--main-color);
   }
+
+  .text-custom-blue {
+    color: var(--main-color);
+  }
+
+  .hero-background {
+    background:
+      linear-gradient(#000000b3, #000000b3), url("../assets/Background.jpg");
+    /* background-image: ; */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

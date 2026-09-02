@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { Logo } from "../ui/Logo";
 import { MobileNav } from "./MobileNav";
+import { DIDNLogo, WhiteDIDNLogo } from "@/assets";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -35,10 +36,10 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`transition-top fixed flex w-full items-center justify-between px-8 duration-200 ${isScrolled ? "top-0 bg-white shadow-md" : "top-0 border-b border-white/20 bg-transparent lg:top-9"} z-50 py-4 md:py-8`}
+        className={`transition-top fixed flex w-full items-center justify-between px-8 duration-200 ${isScrolled ? "top-0 bg-white shadow-md" : "top-0 border-b border-b-blue-500 bg-transparent lg:top-9"} z-50 py-4 md:py-6`}
       >
         <div className="flex max-h-17.5">
-          <Logo />
+          <Logo defaultImage={isScrolled ? DIDNLogo : WhiteDIDNLogo} />
         </div>
 
         <div className="h-ful hidden items-center gap-5 lg:flex">
@@ -47,7 +48,7 @@ export const Navbar: React.FC = () => {
               <li key={i} className="group/nav relative h-full">
                 <Link
                   href={link}
-                  className={`inline-flex gap-1 hover:text-[#0060cc] ${isScrolled ? `${isActive(link) ? "text-[#0060cc]" : "text-black"}` : `${isActive(link) ? "text-[#0060cc]" : "text-black"}`}`}
+                  className={`inline-flex gap-1 hover:text-[#0060cc] ${isScrolled ? `${isActive(link) ? "text-[#0060cc]" : "text-black"}` : `${isActive(link) ? "text-[#0060cc]" : !isScrolled ? "text-white" : isScrolled && "text-black"}`}`}
                 >
                   {title}
                   {dropdownItems && (
