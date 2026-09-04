@@ -1,4 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ComponentType, SVGProps } from "react";
 
 declare global {
@@ -14,5 +13,26 @@ declare global {
       title: string;
       link: string;
     }[];
+  }
+
+  interface IImpactStats {
+    beneficiaries: number;
+    volunteers: number;
+    communityReached: number;
+    projectCompleted: number;
+  }
+
+  type TImpactStatsProps = {
+    value: number;
+    label: string;
+    suffix?: string;
+    desc: string;
+  };
+
+  interface IImpactStatsValues {
+    value: number;
+    label: string;
+    suffix?: string;
+    desc: string;
   }
 }

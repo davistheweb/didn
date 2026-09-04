@@ -36,4 +36,56 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .headline-ui {
+    position: relative;
+  }
+
+  .headline-ui::before {
+    position: absolute;
+    content: "";
+    left: 0%;
+    top: 0;
+    transform: translateX(-50%);
+
+    width: 4px;
+    height: 70px;
+    background-color: rgba(47, 163, 55, 0.2);
+    border-radius: 2px;
+  }
+
+  .headline-ui::after {
+    position: absolute;
+    content: "";
+    left: 0%;
+    top: 0;
+    transform: translateX(-50%);
+
+    width: 15px;
+    height: 15px;
+
+    background-color: var(--main-color);
+    border-radius: 100%;
+
+    box-shadow:
+      0 0 0 6px rgba(0, 96, 204, 0.12),
+      0 0 15px rgba(0, 96, 204, 0.35);
+
+    animation: run-animation 5s infinite linear;
+    z-index: 2;
+  }
+
+  @keyframes run-animation {
+    0% {
+      top: 0;
+    }
+
+    50% {
+      top: 55px;
+    }
+
+    100% {
+      top: 0;
+    }
+  }
 }
