@@ -113,7 +113,7 @@ export const AboutUsSection: React.FC = () => {
   ];
 
   return (
-    <section className="flex h-170 w-full flex-col items-start gap-5 px-8 pt-15">
+    <section className="flex  w-full flex-col items-start gap-5 px-8 pt-15">
       <div>
         <Headline heading="/ About Us /" title="WHO WE ARE" />
       </div>
