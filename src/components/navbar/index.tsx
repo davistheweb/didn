@@ -89,15 +89,9 @@ export const Navbar: React.FC = () => {
           onClick={() => setIsMobileMenuIsOpen((prev) => !prev)}
         >
           {isMobileMenuIsOpen ? (
-            <X
-              size={30}
-              color={isScrolled ? "black" : "white"}
-            />
+            <X size={30} color={isScrolled ? "black" : "white"} />
           ) : (
-            <Menu
-              color={isScrolled ? "black" : "white"}
-              size={30}
-            />
+            <Menu color={isScrolled ? "black" : "white"} size={30} />
           )}
         </button>
       </nav>
