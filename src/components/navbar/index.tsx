@@ -91,11 +91,11 @@ export const Navbar: React.FC = () => {
           {isMobileMenuIsOpen ? (
             <X
               size={30}
-              // color={isScrolled ? "black" : "white"}
+              color={isScrolled ? "black" : "white"}
             />
           ) : (
             <Menu
-              // color={isScrolled ? "black" : "white"}
+              color={isScrolled ? "black" : "white"}
               size={30}
             />
           )}
