@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import { ComponentType, SVGProps } from "react";
 
 declare global {
@@ -34,5 +35,11 @@ declare global {
     label: string;
     suffix?: string;
     desc: string;
+  }
+
+  interface IFocusAreas {
+    title: string;
+    description: string;
+    icon: LucideIcon;
   }
 }
