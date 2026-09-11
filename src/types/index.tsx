@@ -51,4 +51,25 @@ declare global {
     date: string;
     href: string;
   }
+
+  interface IFooterLink {
+    label: string;
+    href: string;
+  }
+
+  interface IFooterColumnGroup {
+    heading?: string;
+    links: IFooterLink[];
+  }
+
+  interface IFooterColumn {
+    title: string;
+    groups: IFooterColumnGroup[];
+  }
+
+  interface ISocialLink {
+    label: string;
+    href: string;
+    icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+  }
 }

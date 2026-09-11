@@ -8,10 +8,7 @@ export const ArticlesSection: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-8 px-8 py-15">
       <div>
-        <Headline
-          heading="/ FROM DIDN"
-          title="Stories From the Work"
-        />
+        <Headline heading="/ FROM DIDN" title="Stories From the Work" />
       </div>
 
       <div className="flex w-full flex-col items-center justify-center gap-4">
@@ -29,10 +26,7 @@ export const ArticlesSection: React.FC = () => {
 
       <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article, _i) => (
-          <ArticleCard
-            key={_i}
-            article={article}
-          />
+          <ArticleCard key={_i} article={article} />
         ))}
       </div>
     </section>

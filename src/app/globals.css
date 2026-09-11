@@ -88,4 +88,11 @@ body {
       top: 0;
     }
   }
+
+  .bg-reachout {
+    background-image: url("../assets/groupimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

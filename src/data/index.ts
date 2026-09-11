@@ -1,4 +1,9 @@
 import { ArticleImg1, ArticleImg2, ArticleImg3 } from "@/assets";
+import Facebook from "@/components/icons/Facebook";
+import Instagram from "@/components/icons/Instagram";
+import Tiktok from "@/components/icons/Tiktok";
+import X from "@/components/icons/X";
+import Youtube from "@/components/icons/Youtube";
 import { GraduationCap, Leaf, Scale, UsersRound } from "lucide-react";
 
 const navItems: INavItems[] = [
@@ -78,4 +83,92 @@ const articles: IArticle[] = [
   },
 ];
 
-export { navItems, focusAreas, articles };
+const socialLinks: ISocialLink[] = [
+  {
+    label: "Facebook",
+    href: "#",
+    icon: Facebook,
+  },
+  {
+    label: "Instagram",
+    href: "#",
+    icon: Instagram,
+  },
+  {
+    label: "X",
+    href: "#",
+    icon: X,
+  },
+  {
+    label: "YouTube",
+    href: "#",
+    icon: Youtube,
+  },
+  {
+    label: "Tiktok",
+    href: "#",
+    icon: Tiktok,
+  },
+];
+
+const footerColumns: IFooterColumn[] = [
+  {
+    title: "Explore",
+    groups: [
+      {
+        links: [
+          { label: "Home", href: "/" },
+          { label: "About Us", href: "/about-us" },
+          { label: "What We Do", href: "/what-we-do" },
+          { label: "Our Work", href: "/our-work" },
+          { label: "Events", href: "/events" },
+          { label: "Gallery", href: "/gallery" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Get Involved",
+    groups: [
+      {
+        links: [
+          { label: "Volunteer", href: "/volunteer" },
+          { label: "Membership", href: "/membership" },
+          { label: "Internship", href: "/internship" },
+          { label: "Partner With Us", href: "/partner-with-us" },
+          { label: "Contact Us", href: "/contact-us" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Contact",
+    groups: [
+      {
+        links: [
+          { label: "info@didn.org", href: "mailto:info@didn.org" },
+          { label: "+234 900 000 0000", href: "tel:+2349000000000" },
+          {
+            label: "Office Address",
+            href: "https://maps.google.com/?q=Direct+Impact+Development+Network",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const legalLinks: IFooterLink[] = [
+  { label: "Privacy Policy", href: "/compliance/privacy-policy" },
+  { label: "Terms and condition", href: "/compliance/terms-and-condition" },
+  { label: "Legal", href: "/legal" },
+];
+
+export {
+  articles,
+  focusAreas,
+  footerColumns,
+  legalLinks,
+  navItems,
+  socialLinks,
+};

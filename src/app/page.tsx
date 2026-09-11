@@ -1,6 +1,7 @@
 import { AboutUs } from "@/components/landing/AboutUs";
 import { ArticlesSection } from "@/components/landing/Articlessection";
 import { Hero } from "@/components/landing/Hero";
+import { ReachOutSection } from "@/components/landing/ReachOutSection";
 import { WhatWeDo } from "@/components/landing/WhatWeDo";
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
       <AboutUs />
       <WhatWeDo />
       <ArticlesSection />
+      <ReachOutSection />
     </main>
   );
 }
