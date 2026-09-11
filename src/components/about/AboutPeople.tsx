@@ -9,10 +9,7 @@ import { MemberCard } from "./MemberCard";
 export const AboutPeople: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-5 px-8 py-15 lg:py-20">
-      <Headline
-        heading="/ Our People"
-        title="The People Behind the Mission"
-      />
+      <Headline heading="/ Our People" title="The People Behind the Mission" />
 
       <p
         className={`${poppinsFont.className} max-w-3xl pt-1 text-sm leading-relaxed text-gray-600`}

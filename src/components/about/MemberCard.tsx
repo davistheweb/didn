@@ -1,7 +1,7 @@
-import type React from "react";
 import { User } from "lucide-react";
-import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 import Image from "next/image";
+import type React from "react";
+import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 
 interface MemberCardProps {
   member: IAboutMember;
@@ -28,9 +28,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2">
             <User size={44} className="text-gray-300" strokeWidth={1} />
-            <span
-              className={`${poppinsFont.className} text-xs text-gray-400`}
-            >
+            <span className={`${poppinsFont.className} text-xs text-gray-400`}>
               Photo pending
             </span>
           </div>

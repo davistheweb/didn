@@ -17,20 +17,14 @@ export const FounderMessage: React.FC = () => {
         <div className="lg:col-span-4">
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-md border border-gray-200 bg-white">
             <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gray-50">
-              <Image
-                src={AmbIrohFaithful}
-                alt="founder"
-              />
+              <Image src={AmbIrohFaithful} alt="founder" />
             </div>
           </div>
         </div>
 
         <div className="flex flex-col justify-center gap-8 lg:col-span-8">
           <div className="border-custom-green flex flex-col gap-5 border-l-2 pl-6 md:pl-8">
-            <Quote
-              size={28}
-              className="text-custom-green"
-            />
+            <Quote size={28} className="text-custom-green" />
             <p
               className={`${rubikFont.className} text-lg leading-relaxed text-gray-700 md:text-xl`}
             >
@@ -54,5 +48,5 @@ export const FounderMessage: React.FC = () => {
         </div>
       </div>
     </section>
-  );;;;
+  );
 };

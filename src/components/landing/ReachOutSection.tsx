@@ -1,12 +1,12 @@
-import { nunitoFont, rubikFont } from "@/lib/font";
 import Link from "next/link";
+import { nunitoFont, rubikFont } from "@/lib/font";
 import { Headline } from "../ui/Headline";
 
 export const ReachOutSection: React.FC = () => {
   return (
     <section className="flex flex-col gap-10 px-8 py-10">
       <div>
-        <Headline heading="/ Reach Out" title="Focus Areas" />
+        <Headline heading="/ Reach Out" title="LET'S MAKE AN IMPACT TOGETHER" />
       </div>
       <div className="flex items-center justify-center">
         <div className="md:w-165.2 bg-custom-green flex h-fit w-87.5 flex-col rounded-2xl sm:w-125 md:flex-row lg:w-250 xl:w-304">

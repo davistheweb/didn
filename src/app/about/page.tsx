@@ -13,6 +13,7 @@ import { OurGoals } from "@/components/about/OurGoals";
 import { OurStory } from "@/components/about/OurStory";
 import { Partners } from "@/components/about/Partners";
 import { SdgAlignment } from "@/components/about/SdgAlignment";
+import { ReachOutSection } from "@/components/landing/ReachOutSection";
 
 export default function AboutPage() {
   return (
@@ -31,7 +32,7 @@ export default function AboutPage() {
       <OrganizationalStructure />
       {/* <BoardAdvisory /> */}
       <Partners />
-      {/* <AboutCTA /> */}
+      <ReachOutSection />
     </main>
   );
 }

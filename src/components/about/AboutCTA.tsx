@@ -5,7 +5,13 @@ import type React from "react";
 import CTABackgroundImage from "@/assets/IMG_0777.jpg";
 import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 
-export const AboutCTA: React.FC = () => {
+interface AboutCTAProps {
+  label?: string;
+}
+
+export const AboutCTA: React.FC<AboutCTAProps> = ({
+  label = "15 / Get Involved",
+}) => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="absolute inset-0">
@@ -27,7 +33,7 @@ export const AboutCTA: React.FC = () => {
             <span
               className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
             >
-              / Get Involved
+              {label}
             </span>
           </div>
 

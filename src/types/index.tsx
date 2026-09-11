@@ -1,6 +1,6 @@
-import { LucideIcon } from "lucide-react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { ComponentType, SVGProps } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import type { ComponentType, SVGProps } from "react";
 
 declare global {
   type IconType = ComponentType<

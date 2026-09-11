@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
 
       {/* Big background wordmark */}
       <div className="relative flex w-full items-center justify-center pt-10 pb-6">
-        <span className="pointer-events-none text-[15vw] leading-none font-bold text-white/5 select-none">
+        <span className="pointer-events-none text-[15vw] leading-none font-bold text-white/20 select-none">
           DIDN
         </span>
       </div>

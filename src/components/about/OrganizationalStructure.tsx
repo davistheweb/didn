@@ -45,7 +45,7 @@ export const OrganizationalStructure: React.FC = () => {
           ))}
         </div>
       </div>
-{/* 
+      {/* 
       <p
         className={`${poppinsFont.className} mx-auto mt-4 text-xs text-gray-400`}
       >
