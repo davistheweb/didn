@@ -16,10 +16,7 @@ export const FooterColumn: React.FC<FooterColumnProps> = ({ column }) => {
 
       <div className="flex flex-col gap-6 sm:flex-row lg:flex-col lg:gap-6">
         {groups.map((group, _i) => (
-          <div
-            key={_i}
-            className="flex flex-col gap-3"
-          >
+          <div key={_i} className="flex flex-col gap-3">
             {group.heading && (
               <span className="text-sm text-white/60">{group.heading}</span>
             )}

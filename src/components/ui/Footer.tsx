@@ -42,10 +42,7 @@ export const Footer: React.FC = () => {
                 aria-label={social.label}
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#150806] transition-opacity duration-200 hover:opacity-80"
               >
-                <social.icon
-                  className="h-4 w-4"
-                  strokeWidth={2}
-                />
+                <social.icon className="h-4 w-4" strokeWidth={2} />
               </Link>
             ))}
           </div>
@@ -83,10 +80,7 @@ export const Footer: React.FC = () => {
       {/* Columns */}
       <div className="mb-20 grid w-full grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {footerColumns.map((column, _i) => (
-          <FooterColumn
-            key={_i}
-            column={column}
-          />
+          <FooterColumn key={_i} column={column} />
         ))}
       </div>
 
@@ -100,7 +94,8 @@ export const Footer: React.FC = () => {
       {/* Bottom bar */}
       <div className="flex w-full flex-col items-center justify-center gap-3 border-t border-white/10 pt-6">
         <p className="text-center text-xs text-gray-100">
-          © {new Date().getFullYear()} Direct Impact Development Network. All rights reserved.
+          © {new Date().getFullYear()} Direct Impact Development Network. All
+          rights reserved.
         </p>
 
         {/* <ul className="flex items-center gap-6">
@@ -117,5 +112,5 @@ export const Footer: React.FC = () => {
         </ul> */}
       </div>
     </footer>
-  );;;
+  );
 };
