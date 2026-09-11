@@ -1,8 +1,8 @@
-import { DIDNLogo } from "@/assets";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import type React from "react";
+import { DIDNLogo } from "@/assets";
 
 export const Logo: React.FC<{ defaultImage?: StaticImport }> = ({
   defaultImage = DIDNLogo,

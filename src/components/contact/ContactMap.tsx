@@ -7,10 +7,16 @@ import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 export const ContactMap: React.FC = () => {
   return (
     <section className="flex w-full flex-col gap-10 border-t border-gray-200 bg-[#f4f7fa] px-8 py-15 lg:py-20">
-      <Headline heading="03 / Our Location" title="Find Us" />
+      <div data-aos="fade-up">
+        <Headline heading="03 / Our Location" title="Find Us" />
+      </div>
 
       <div className="flex w-full flex-col gap-4">
-        <div className="w-full overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm">
+        <div
+          className="w-full overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <iframe
             title="Direct Impact Development Network location map"
             src={officeLocation.embedUrl}
@@ -21,7 +27,11 @@ export const ContactMap: React.FC = () => {
           />
         </div>
 
-        <div className="flex flex-col justify-between gap-4 bg-white p-6 sm:flex-row sm:items-center">
+        <div
+          className="flex flex-col justify-between gap-4 bg-white p-6 sm:flex-row sm:items-center"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="flex items-start gap-3">
             <span className="bg-custom-blue/10 text-custom-blue mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full">
               <MapPin size={16} />

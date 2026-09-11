@@ -19,7 +19,7 @@ export const AboutImpact: React.FC = () => {
       </div>
 
       <div className="relative flex w-full flex-col items-start gap-6 px-8 py-16 lg:py-24">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3" data-aos="fade-up">
           <span className="h-2 w-2 rounded-full bg-custom-green" />
           <span
             className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
@@ -30,13 +30,20 @@ export const AboutImpact: React.FC = () => {
 
         <h2
           className={`${nunitoFont.className} text-2xl leading-tight font-bold text-white md:text-4xl`}
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           Making a Difference Where It Matters
         </h2>
 
         <div className="mt-6 grid w-full grid-cols-2 gap-y-10 lg:grid-cols-4 lg:divide-x lg:divide-white/15">
-          {aboutImpactStats.map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-2 lg:px-10">
+          {aboutImpactStats.map((stat, _i) => (
+            <div
+              key={stat.label}
+              className="flex flex-col gap-2 lg:px-10"
+              data-aos="fade-up"
+              data-aos-delay={_i * 100}
+            >
               <span
                 className={`${nunitoFont.className} text-4xl font-bold text-white md:text-5xl`}
               >

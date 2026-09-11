@@ -6,7 +6,7 @@ export const MissionVision: React.FC = () => {
   return (
     <section className="flex w-full flex-col bg-custom-blue px-8 py-16 lg:py-24">
       <div className="flex flex-col gap-5">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3" data-aos="fade-up">
           <span className="h-2 w-2 rounded-full bg-custom-green" />
           <span
             className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
@@ -16,7 +16,11 @@ export const MissionVision: React.FC = () => {
         </div>
 
         <div className="mt-6 grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-5 border-t-2 border-white/25 pt-7">
+          <div
+            className="flex flex-col gap-5 border-t-2 border-white/25 pt-7"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <span
               className={`${nunitoFont.className} text-xs font-bold tracking-widest text-white/70 uppercase`}
             >
@@ -40,7 +44,11 @@ export const MissionVision: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-5 border-t-2 border-white/25 pt-7">
+          <div
+            className="flex flex-col gap-5 border-t-2 border-white/25 pt-7"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             <span
               className={`${nunitoFont.className} text-xs font-bold tracking-widest text-white/70 uppercase`}
             >
@@ -58,7 +66,11 @@ export const MissionVision: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-8 flex max-w-4xl flex-col items-center gap-5 border-t border-white/20 pt-12 text-center">
+        <div
+          className="relative mx-auto mt-8 flex max-w-4xl flex-col items-center gap-5 border-t border-white/20 pt-12 text-center"
+          data-aos="fade-up"
+          data-aos-delay="350"
+        >
           <Quote size={30} className="text-custom-green" />
           <p
             className={`${rubikFont.className} text-lg leading-relaxed text-white md:text-2xl`}

@@ -1,11 +1,12 @@
 "use client";
 
-import { MeetingAboutImage } from "@/assets";
-import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
+import { MeetingAboutImage } from "@/assets";
+import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 import { Headline } from "./Headline";
 import { ImpactStats } from "./ImpactStats";
 
@@ -120,12 +121,14 @@ export const AboutUsSection: React.FC = () => {
 
       <h1
         className={`md:text-3xl text-center w-full text-xl font-medium ${nunitoFont.className}`}
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         Creating Impact Where It <br /> Matters Most.
       </h1>
 
       <div className="flex flex-col gap-10 pt-10 lg:flex-row">
-        <div className="flex md:h-100 md:w-117.5">
+        <div className="flex md:h-100 md:w-117.5" data-aos="fade-right">
           <Image
             src={MeetingAboutImage}
             alt="about image"
@@ -134,7 +137,7 @@ export const AboutUsSection: React.FC = () => {
         </div>
 
         <div className="space-y-3 px-5 md:max-w-187.5" ref={statsRef}>
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="150">
             <p className={`${poppinsFont.className} text-[14px]`}>
               Direct Impact Development Network (DIDN) is a non-profit
               organization committed to creating sustainable solutions that
@@ -150,6 +153,8 @@ export const AboutUsSection: React.FC = () => {
           <Link
             href="/about"
             className={`flex w-fit cursor-pointer items-center  justify-center text-[13px] text-center gap-1 rounded-full bg-black p-2 text-white ${rubikFont.className}`}
+            data-aos="fade-up"
+            data-aos-delay="250"
           >
             Learn More{" "}
             <ArrowUpRight
@@ -158,7 +163,11 @@ export const AboutUsSection: React.FC = () => {
               color="black"
             />
           </Link>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div
+            className="grid md:grid-cols-2 gap-5"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
             {impactStats.map(({ value, label, suffix, desc }, _i) => (
               <ImpactStats
                 key={_i}

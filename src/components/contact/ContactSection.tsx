@@ -13,11 +13,17 @@ export const ContactSection: React.FC = () => {
       id="get-in-touch"
       className="flex w-full scroll-mt-24 flex-col gap-10 px-8 py-15 lg:py-20"
     >
-      <Headline heading="02 / Contact Us" title="Reach Us Directly" />
+      <div data-aos="fade-up">
+        <Headline heading="02 / Contact Us" title="Reach Us Directly" />
+      </div>
 
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="flex flex-col lg:col-span-5">
-          <div className="flex flex-col divide-y divide-gray-200 border-y border-gray-200">
+          <div
+            className="flex flex-col divide-y divide-gray-200 border-y border-gray-200"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <div className="flex gap-5 py-7">
               <span className="bg-custom-blue/10 text-custom-blue flex h-11 w-11 shrink-0 items-center justify-center rounded-full">
                 <Phone size={18} />
@@ -99,7 +105,11 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 pt-8">
+          <div
+            className="flex flex-col gap-4 pt-8"
+            data-aos="fade-right"
+            data-aos-delay="250"
+          >
             <span
               className={`${nunitoFont.className} text-xs font-semibold tracking-widest text-gray-400 uppercase`}
             >
@@ -128,7 +138,11 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-7">
+        <div
+          className="lg:col-span-7"
+          data-aos="fade-left"
+          data-aos-delay="150"
+        >
           <ContactForm />
         </div>
       </div>

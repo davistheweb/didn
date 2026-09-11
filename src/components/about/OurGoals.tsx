@@ -6,13 +6,20 @@ import { Headline } from "../ui/Headline";
 export const OurGoals: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-5 bg-[#f4f7fa] px-8 py-15 lg:py-20">
-      <Headline heading="/ Our Goals" title="Turning Commitment Into Action" />
+      <div data-aos="fade-up">
+        <Headline
+          heading="/ Our Goals"
+          title="Turning Commitment Into Action"
+        />
+      </div>
 
       <div className="mt-8 w-full divide-y divide-gray-200 border-y border-gray-200">
         {aboutGoals.map((goal, _i) => (
           <div
             key={goal.title}
             className="grid gap-3 py-7 md:grid-cols-12 md:items-baseline md:gap-6"
+            data-aos="fade-up"
+            data-aos-delay={_i * 75}
           >
             <span
               className={`${nunitoFont.className} text-sm font-bold text-custom-green md:col-span-1`}

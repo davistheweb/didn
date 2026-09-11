@@ -1,13 +1,14 @@
 "use client";
-import { navItems } from "@/data";
-import { rubikFont } from "@/lib/font";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
+import { DIDNLogo, WhiteDIDNLogo } from "@/assets";
+import { navItems } from "@/data";
+import { rubikFont } from "@/lib/font";
 import { Logo } from "../ui/Logo";
 import { MobileNav } from "./MobileNav";
-import { DIDNLogo, WhiteDIDNLogo } from "@/assets";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);

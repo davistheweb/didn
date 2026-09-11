@@ -11,11 +11,16 @@ export const ContactHero: React.FC = () => {
         <div className="flex flex-col justify-center gap-6 lg:col-span-7 lg:pr-14">
           <h1
             className={`${nunitoFont.className} text-3xl leading-tight font-bold text-white md:text-5xl`}
+            data-aos="fade-up"
           >
             We'd Love to Hear From You.
           </h1>
 
-          <div className="flex flex-col gap-4 md:max-w-2xl">
+          <div
+            className="flex flex-col gap-4 md:max-w-2xl"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <p
               className={`${rubikFont.className} text-base leading-relaxed text-white/85 md:text-lg`}
             >
@@ -34,12 +39,18 @@ export const ContactHero: React.FC = () => {
           <a
             href="#get-in-touch"
             className={`${rubikFont.className} flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-custom-green px-8 py-4 font-medium text-white transition-opacity duration-200 hover:opacity-90`}
+            data-aos="fade-up"
+            data-aos-delay="250"
           >
             Get In Touch <ArrowDown size={18} />
           </a>
         </div>
 
-        <div className="relative hidden lg:col-span-5 lg:block">
+        <div
+          className="relative hidden lg:col-span-5 lg:block"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
           <div className="relative aspect-[3/4] w-full">
             <div className="absolute -top-5 -left-5 h-full w-full border-2 border-[#45a113]/50" />
             <Image

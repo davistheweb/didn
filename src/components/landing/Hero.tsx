@@ -1,12 +1,15 @@
-import { rubikFont } from "@/lib/font";
 import Link from "next/link";
-import React from "react";
+import type React from "react";
+import { rubikFont } from "@/lib/font";
 
 export const Hero: React.FC = () => {
   return (
     <section className="hero-background flex h-170 w-full items-center px-8 pt-25">
       <div className="flex w-full flex-col gap-5 p-0">
-        <div className="flex flex-col gap-3 justify-center md:items-start ">
+        <div
+          className="flex flex-col gap-3 justify-center md:items-start"
+          data-aos="fade-up"
+        >
           <h1
             className={`md:text-6xl text-2xl text-white ${rubikFont.className} font-bold`}
           >
@@ -16,7 +19,11 @@ export const Hero: React.FC = () => {
             Empowering Communities. Shaping a Better Future.
           </p>
         </div>
-        <div className="flex md:flex-row flex-col gap-4">
+        <div
+          className="flex md:flex-row flex-col gap-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <Link
             href="/contact"
             className="bg-custom-green flex items-center rounded-lg px-8 pt-[17.5px] pb-4.5 text-white"

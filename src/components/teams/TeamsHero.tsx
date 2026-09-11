@@ -9,7 +9,7 @@ export const TeamsHero: React.FC = () => {
     <section className="relative flex w-full overflow-hidden bg-[#0b2f66]">
       <div className="flex w-full flex-col gap-10 px-8 pt-28 pb-16 md:pt-36 lg:flex-row lg:items-end lg:justify-between lg:pt-44 lg:pb-24">
         <div className="flex flex-col gap-6 lg:max-w-3xl">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3" data-aos="fade-up">
             <span className="h-2 w-2 rounded-full bg-custom-green" />
             <span
               className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
@@ -20,11 +20,17 @@ export const TeamsHero: React.FC = () => {
 
           <h1
             className={`${nunitoFont.className} text-3xl leading-tight font-bold text-white md:text-5xl`}
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             The People Behind the Mission
           </h1>
 
-          <div className="flex flex-col gap-3">
+          <div
+            className="flex flex-col gap-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <p
               className={`${poppinsFont.className} text-sm leading-relaxed text-white/85 md:text-base`}
             >
@@ -42,12 +48,18 @@ export const TeamsHero: React.FC = () => {
           <a
             href="#team"
             className={`${poppinsFont.className} flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-custom-green px-8 py-4 font-medium text-white transition-opacity duration-200 hover:opacity-90`}
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             Meet the Team <ArrowDown size={18} />
           </a>
         </div>
 
-        <div className="flex flex-col gap-4 border-l-2 border-[#45a113]/50 pl-6 lg:max-w-72">
+        <div
+          className="flex flex-col gap-4 border-l-2 border-[#45a113]/50 pl-6 lg:max-w-72"
+          data-aos="fade-left"
+          data-aos-delay="250"
+        >
           <span
             className={`${nunitoFont.className} text-xs font-bold tracking-widest text-white/60 uppercase`}
           >

@@ -1,6 +1,6 @@
+import type React from "react";
 import { focusAreas } from "@/data";
 import { nunitoFont, rubikFont } from "@/lib/font";
-import React from "react";
 import { Headline } from "../ui/Headline";
 
 export const WhatWeDo: React.FC = () => {
@@ -13,11 +13,17 @@ export const WhatWeDo: React.FC = () => {
       <div className="flex w-full flex-col items-center justify-center gap-4">
         <h1
           className={`w-full text-center text-xl font-medium md:text-3xl ${nunitoFont.className}`}
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           Building stronger communities, <br /> one area at a time.
         </h1>
 
-        <p className={`${rubikFont.className} text-center md:w-137.5`}>
+        <p
+          className={`${rubikFont.className} text-center md:w-137.5`}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           We focus on practical solutions that create opportunities, protect
           communities and the environment, and empower people to lead change.
         </p>
@@ -28,6 +34,8 @@ export const WhatWeDo: React.FC = () => {
           <div
             key={_i}
             className="group relative overflow-hidden rounded-lg border border-[#2f73a333] bg-[#2fa33733]/80 backdrop-blur-lg"
+            data-aos="fade-up"
+            data-aos-delay={_i * 100}
           >
             {" "}
             <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-blue-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

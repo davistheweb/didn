@@ -6,13 +6,17 @@ import { Headline } from "../ui/Headline";
 export const SdgAlignment: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-5 px-8 py-15 lg:py-20">
-      <Headline
-        heading="/ SDG Alignment"
-        title="Contributing to Sustainable Development"
-      />
+      <div data-aos="fade-up">
+        <Headline
+          heading="/ SDG Alignment"
+          title="Contributing to Sustainable Development"
+        />
+      </div>
 
       <p
         className={`${rubikFont.className} max-w-4xl pt-2 text-[15px] leading-relaxed text-gray-600`}
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         DIDN's work contributes to the broader Sustainable Development Goals by
         addressing interconnected challenges across health, education, equality,
@@ -20,10 +24,12 @@ export const SdgAlignment: React.FC = () => {
       </p>
 
       <div className="mt-6 grid w-full gap-x-12 md:grid-cols-2">
-        {sdgs.map((sdg) => (
+        {sdgs.map((sdg, _i) => (
           <div
             key={sdg.id}
             className="flex items-center gap-5 border-b border-gray-200 py-4"
+            data-aos="fade-up"
+            data-aos-delay={(_i % 4) * 75}
           >
             <span
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm"

@@ -1,8 +1,6 @@
-import { AboutCTA } from "@/components/about/AboutCTA";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutImpact } from "@/components/about/AboutImpact";
 import { AboutPeople } from "@/components/about/AboutPeople";
-import { BoardAdvisory } from "@/components/about/BoardAdvisory";
 import { CoreValues } from "@/components/about/CoreValues";
 import { FounderMessage } from "@/components/about/FounderMessage";
 import { MissionVision } from "@/components/about/MissionVision";
@@ -17,7 +15,7 @@ import { ReachOutSection } from "@/components/landing/ReachOutSection";
 
 export default function AboutPage() {
   return (
-    <main className="h-full w-full scroll-smooth overflow-x-hidden">
+    <main className="w-full scroll-smooth overflow-x-clip">
       <AboutHero />
       <OurStory />
       <MissionVision />

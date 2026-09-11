@@ -16,11 +16,16 @@ export const MemberHero: React.FC<MemberHeroProps> = ({ member }) => {
           <Link
             href="/teams"
             className={`${rubikFont.className} flex w-fit cursor-pointer items-center gap-2 text-sm font-medium text-white/70 transition-colors duration-200 hover:text-white`}
+            data-aos="fade-up"
           >
             <ArrowLeft size={16} /> Teams
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <span className="h-2 w-2 rounded-full bg-custom-green" />
             <span
               className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
@@ -31,17 +36,25 @@ export const MemberHero: React.FC<MemberHeroProps> = ({ member }) => {
 
           <h1
             className={`${nunitoFont.className} text-3xl leading-tight font-bold text-white md:text-5xl`}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             {member.name}
           </h1>
 
           <span
             className={`${rubikFont.className} w-fit rounded-full bg-custom-green px-5 py-2 text-sm font-medium text-white`}
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             {member.role}
           </span>
 
-          <div className="flex flex-wrap gap-2">
+          <div
+            className="flex flex-wrap gap-2"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
             {member.tags.map((tag) => (
               <span
                 key={tag}
@@ -53,7 +66,11 @@ export const MemberHero: React.FC<MemberHeroProps> = ({ member }) => {
           </div>
         </div>
 
-        <div className="relative hidden lg:col-span-5 lg:block">
+        <div
+          className="relative hidden lg:col-span-5 lg:block"
+          data-aos="fade-left"
+          data-aos-delay="250"
+        >
           <div className="relative aspect-[3/4] w-full">
             <div className="absolute -top-5 -left-5 h-full w-full border-2 border-[#45a113]/50" />
             <Image

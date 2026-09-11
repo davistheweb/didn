@@ -17,7 +17,11 @@ export const TeamMemberRow: React.FC<TeamMemberRowProps> = ({
 
   return (
     <article className="grid gap-8 border-t border-gray-200 py-14 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
-      <div className={`relative w-full ${isReversed ? "lg:order-2" : ""}`}>
+      <div
+        className={`relative w-full ${isReversed ? "lg:order-2" : ""}`}
+        data-aos={isReversed ? "fade-left" : "fade-right"}
+        data-aos-delay={index * 100}
+      >
         <div className="relative mx-auto aspect-[3/4] w-full max-w-sm lg:max-w-none">
           <div
             className={`absolute ${isReversed ? "-top-5 -right-5" : "-top-5 -left-5"} h-full w-full border-2 border-[#45a113]/50`}
@@ -32,7 +36,11 @@ export const TeamMemberRow: React.FC<TeamMemberRowProps> = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
+      <div
+        className="flex flex-col gap-5"
+        data-aos="fade-up"
+        data-aos-delay={index * 100 + 100}
+      >
         <div className="flex flex-col gap-1">
           <span
             className={`${rubikFont.className} text-sm font-medium text-custom-green`}

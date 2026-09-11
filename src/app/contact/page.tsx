@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="scroll-smooth overflow-x-hidden">
+    <main className="scroll-smooth overflow-x-clip">
       <ContactHero />
       <ContactSection />
       <ContactMap />

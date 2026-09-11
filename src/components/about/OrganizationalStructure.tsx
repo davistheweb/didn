@@ -1,16 +1,20 @@
 import { ChevronDown } from "lucide-react";
 import type React from "react";
 import { orgStructure } from "@/data/about";
-import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
+import { nunitoFont, rubikFont } from "@/lib/font";
 import { Headline } from "../ui/Headline";
 
 export const OrganizationalStructure: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-5 bg-[#f4f7fa] px-8 py-15 lg:py-20">
-      <Headline heading="/ Our Structure" title="How We Work" />
+      <div data-aos="fade-up">
+        <Headline heading="/ Our Structure" title="How We Work" />
+      </div>
 
       <p
         className={`${rubikFont.className} max-w-3xl pt-1 text-[15px] leading-relaxed text-gray-600`}
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         DIDN brings together leadership, staff, volunteers, partners, and other
         stakeholders to support the organization's programs and initiatives.
@@ -22,6 +26,8 @@ export const OrganizationalStructure: React.FC = () => {
             <div
               key={level.title}
               className="flex w-full flex-col items-center"
+              data-aos="fade-up"
+              data-aos-delay={_i * 100}
             >
               <div className="flex w-full items-center justify-center rounded-sm border border-gray-200 bg-white px-6 py-5">
                 <span

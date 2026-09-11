@@ -8,10 +8,14 @@ import { Headline } from "../ui/Headline";
 export const Partners: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-5 bg-[#f4f7fa] px-8 py-15 lg:py-20">
-      <Headline heading="/ Our Partners" title="Stronger Together" />
+      <div data-aos="fade-up">
+        <Headline heading="/ Our Partners" title="Stronger Together" />
+      </div>
 
       <p
         className={`${rubikFont.className} max-w-3xl pt-1 text-[15px] leading-relaxed text-gray-600`}
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         We believe meaningful and sustainable change is achieved through
         collaboration. DIDN works with communities, institutions, organizations,
@@ -23,6 +27,8 @@ export const Partners: React.FC = () => {
           <div
             key={_i}
             className="flex aspect-[2/1] items-center justify-center gap-2 rounded-md border border-gray-200 bg-white"
+            data-aos="fade-up"
+            data-aos-delay={(_i % 4) * 75}
           >
             <Building2 size={20} className="text-gray-300" strokeWidth={1.5} />
             <span
@@ -37,6 +43,8 @@ export const Partners: React.FC = () => {
       <Link
         href="/contact"
         className={`${rubikFont.className} mt-5 flex items-center gap-2 font-semibold text-custom-green transition-colors duration-200 hover:text-[#123f2b]`}
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         Become a Partner
         <ArrowRight size={18} />

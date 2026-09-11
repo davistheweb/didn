@@ -13,9 +13,15 @@ export const OurStory: React.FC = () => {
     >
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="flex flex-col gap-6 lg:col-span-5">
-          <Headline heading="/ Our Story" title="From Purpose to Impact" />
+          <div data-aos="fade-up">
+            <Headline heading="/ Our Story" title="From Purpose to Impact" />
+          </div>
 
-          <div className="flex flex-col gap-4 pt-4">
+          <div
+            className="flex flex-col gap-4 pt-4"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             {storyParagraphs.map((paragraph, _i) => (
               <p
                 key={_i}
@@ -28,7 +34,11 @@ export const OurStory: React.FC = () => {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="relative aspect-video w-full overflow-hidden rounded-md">
+          <div
+            className="relative aspect-video w-full overflow-hidden rounded-md"
+            data-aos="fade-left"
+            data-aos-delay="150"
+          >
             <Image
               src={StoryImage}
               alt="DIDN staff and community members working together"
@@ -39,7 +49,11 @@ export const OurStory: React.FC = () => {
           </div>
 
           <div className="mt-10 flex w-full flex-col">
-            <div className="mb-2 flex items-center gap-4">
+            <div
+              className="mb-2 flex items-center gap-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <span className="h-px w-10 bg-custom-blue" />
               <span
                 className={`${nunitoFont.className} text-xs font-bold tracking-widest text-gray-400 uppercase`}
@@ -53,6 +67,8 @@ export const OurStory: React.FC = () => {
                 <div
                   key={area}
                   className="flex items-center gap-4 border-b border-gray-200 py-3.5"
+                  data-aos="fade-up"
+                  data-aos-delay={_i * 50}
                 >
                   <span
                     className={`${nunitoFont.className} text-sm font-bold text-custom-green`}

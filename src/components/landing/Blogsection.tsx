@@ -14,11 +14,17 @@ export const BlogSection: React.FC = () => {
       <div className="flex w-full flex-col items-center justify-center gap-4">
         <h1
           className={`w-full text-center text-xl font-medium md:text-3xl ${nunitoFont.className}`}
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           Blogs
         </h1>
 
-        <p className={`${rubikFont.className} text-center md:w-137.5`}>
+        <p
+          className={`${rubikFont.className} text-center md:w-137.5`}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Stay connected with the latest updates, stories, events, and
           activities from Direct Impact Development Network
         </p>
@@ -26,7 +32,14 @@ export const BlogSection: React.FC = () => {
 
       <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog, _i) => (
-          <BlogCard key={_i} blog={blog} />
+          <div
+            key={_i}
+            className="h-full"
+            data-aos="fade-up"
+            data-aos-delay={_i * 100}
+          >
+            <BlogCard blog={blog} />
+          </div>
         ))}
       </div>
     </section>

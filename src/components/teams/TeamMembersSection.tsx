@@ -9,7 +9,7 @@ export const TeamMembersSection: React.FC = () => {
       id="team"
       className="flex w-full scroll-mt-24 flex-col gap-10 px-8 py-15 lg:py-20"
     >
-      <div>
+      <div data-aos="fade-up">
         <Headline
           heading="02 / Leadership & Team"
           title="Meet the People Driving Our Work"

@@ -1,7 +1,7 @@
 "use client";
 
+import type React from "react";
 import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
-import React from "react";
 
 export const ImpactStats: React.FC<
   {

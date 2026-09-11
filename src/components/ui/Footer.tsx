@@ -1,12 +1,13 @@
 "use client";
 
-import { footerColumns, legalLinks, socialLinks } from "@/data";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
+import { WhiteDIDNLogo } from "@/assets";
+import { footerColumns, socialLinks } from "@/data";
 import { FooterColumn } from "./Footercolumn";
 import { Logo } from "./Logo";
-import { WhiteDIDNLogo } from "@/assets";
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState("");

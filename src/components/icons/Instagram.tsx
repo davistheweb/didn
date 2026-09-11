@@ -1,4 +1,4 @@
-import React, { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 interface InstagramProps extends SVGProps<SVGSVGElement> {
   size?: `${number}` | number;

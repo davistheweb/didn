@@ -59,6 +59,8 @@ export const ContactForm: React.FC = () => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
+      data-aos="fade-up"
+      data-aos-delay="100"
       className="flex flex-col gap-6 rounded-md border border-gray-300 bg-white p-6 md:p-10"
     >
       <div className="flex flex-col gap-1">

@@ -21,7 +21,7 @@ const navItems: INavItems[] = [
       },
     ],
   },
-    {
+  {
     title: "Blog",
     link: "/blog",
   },

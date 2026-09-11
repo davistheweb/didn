@@ -28,7 +28,7 @@ export const AboutCTA: React.FC<AboutCTAProps> = ({
 
       <div className="relative flex w-full flex-col items-center px-8 py-16 lg:py-24">
         <div className="flex flex-col items-center gap-5 text-center">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3" data-aos="fade-up">
             <span className="h-2 w-2 rounded-full bg-white" />
             <span
               className={`${nunitoFont.className} text-sm font-semibold tracking-widest text-white/70 uppercase`}
@@ -39,19 +39,27 @@ export const AboutCTA: React.FC<AboutCTAProps> = ({
 
           <h2
             className={`${nunitoFont.className} text-2xl leading-tight font-bold text-white md:text-4xl`}
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             Let's Create Impact Together
           </h2>
 
           <p
             className={`${poppinsFont.className} max-w-2xl text-sm leading-relaxed text-white/90 md:text-base`}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             Whether you're looking to collaborate, volunteer, support an
             initiative, or learn more about our work, we invite you to connect
             with Direct Impact Development Network.
           </p>
 
-          <div className="flex flex-col gap-4 pt-2 sm:flex-row">
+          <div
+            className="flex flex-col gap-4 pt-2 sm:flex-row"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <Link
               href="/contact"
               className={`${rubikFont.className} flex items-center gap-2 rounded-lg bg-custom-blue px-8 py-4 font-medium text-white transition-colors duration-200 hover:bg-[#0a428c]`}

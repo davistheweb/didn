@@ -7,6 +7,7 @@ export interface IContactSubmission {
 
 export const submitContactForm = async (
   payload: IContactSubmission,
-): Promise<void> => {
+): Promise<IContactSubmission> => {
   await new Promise((resolve) => setTimeout(resolve, 800));
+  return payload;
 };

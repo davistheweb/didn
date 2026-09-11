@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AboutCTA } from "@/components/about/AboutCTA";
+import { ReachOutSection } from "@/components/landing/ReachOutSection";
 import { MemberHero } from "@/components/teams/MemberHero";
 import { MemberProfile } from "@/components/teams/MemberProfile";
 import { getTeamMemberBySlug, teamMembers } from "@/data/teams";
-import { ReachOutSection } from "@/components/landing/ReachOutSection";
 
 interface MemberPageProps {
   params: Promise<{ slug: string }>;
@@ -44,7 +43,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
   const nextMember = teamMembers[(index + 1) % teamMembers.length];
 
   return (
-    <main className="h-full w-full overflow-x-hidden">
+    <main className="w-full overflow-x-clip">
       <MemberHero member={member} />
       <MemberProfile
         member={member}

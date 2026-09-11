@@ -1,9 +1,10 @@
 "use client";
-import { navItems } from "@/data";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
+import { navItems } from "@/data";
 
 export const MobileNav: React.FC<{
   isMobileMenuIsOpen: boolean;

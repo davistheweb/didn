@@ -6,7 +6,7 @@ import { WhatWeDo } from "@/components/landing/WhatWeDo";
 
 export default function HomePage() {
   return (
-    <main className="h-full w-full overflow-x-hidden">
+    <main className="w-full overflow-x-clip">
       <Hero />
       <AboutUs />
       <WhatWeDo />

@@ -10,7 +10,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   const { title, category, image, date, href } = blog;
 
   return (
-    <article className="group flex w-full flex-col overflow-hidden rounded-md border border-gray-200 bg-white transition-shadow duration-300 hover:shadow-lg">
+    <article className="group flex h-full w-full flex-col overflow-hidden rounded-md border border-gray-200 bg-white transition-shadow duration-300 hover:shadow-lg">
       <div className="relative h-56 w-full overflow-hidden">
         <Image
           src={image}

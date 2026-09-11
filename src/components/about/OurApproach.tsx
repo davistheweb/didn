@@ -6,12 +6,18 @@ import { Headline } from "../ui/Headline";
 export const OurApproach: React.FC = () => {
   return (
     <section className="flex w-full flex-col  gap-5 px-8 py-8 lg:py-10">
-      <Headline
-        heading="/ Our Approach"
-        title="We Listen. We Collaborate. We Act."
-      />
+      <div data-aos="fade-up">
+        <Headline
+          heading="/ Our Approach"
+          title="We Listen. We Collaborate. We Act."
+        />
+      </div>
 
-      <div className="mt-1 flex flex-col items-center gap-1.5 pt-2 text-center">
+      <div
+        className="mt-1 flex flex-col items-center gap-1.5 pt-2 text-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         <p
           className={`${rubikFont.className} text-[15px] leading-relaxed text-gray-700`}
         >
@@ -35,6 +41,8 @@ export const OurApproach: React.FC = () => {
             <div
               key={stage.title}
               className="relative flex gap-5 md:flex-col md:gap-5"
+              data-aos="fade-up"
+              data-aos-delay={_i * 100}
             >
               <span
                 className={`${nunitoFont.className} z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-custom-green bg-white text-sm font-bold text-custom-green`}

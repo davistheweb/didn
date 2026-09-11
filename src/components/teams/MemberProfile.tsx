@@ -19,9 +19,15 @@ export const MemberProfile: React.FC<MemberProfileProps> = ({
     <section className="flex w-full flex-col gap-12 px-8 py-15 lg:py-24">
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="flex flex-col gap-8 lg:col-span-8 lg:pr-10">
-          <Headline heading="Profile" title={member.name} />
+          <div data-aos="fade-up">
+            <Headline heading="Profile" title={member.name} />
+          </div>
 
-          <div className="flex flex-col gap-6">
+          <div
+            className="flex flex-col gap-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             {member.bio.map((paragraph, _i) => (
               <p
                 key={_i}
@@ -37,7 +43,11 @@ export const MemberProfile: React.FC<MemberProfileProps> = ({
           </div>
         </div>
 
-        <aside className="flex flex-col gap-6 lg:col-span-4">
+        <aside
+          className="flex flex-col gap-6 lg:col-span-4"
+          data-aos="fade-left"
+          data-aos-delay="150"
+        >
           <div className="flex flex-col gap-4 rounded-md border border-gray-200 bg-[#f4f7fa] p-6">
             <div className="flex flex-col gap-1">
               <span
@@ -81,7 +91,11 @@ export const MemberProfile: React.FC<MemberProfileProps> = ({
       </div>
 
       {(prevMember?.slug || nextMember?.slug) && (
-        <div className="flex flex-col items-stretch justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row">
+        <div
+          className="flex flex-col items-stretch justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {prevMember ? (
             <Link
               href={`/teams/${prevMember.slug}`}

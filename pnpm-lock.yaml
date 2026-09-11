@@ -51,6 +51,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.3.3
+      '@types/aos':
+        specifier: ^3.0.8
+        version: 3.0.8
       '@types/node':
         specifier: ^20
         version: 20.19.43
@@ -538,6 +541,9 @@ packages:
 
   '@tailwindcss/postcss@4.3.3':
     resolution: {integrity: sha512-JTSZZGQi1AyKirbLN3azmjVzef92tcX7h+iSqPdaeStyFpGpDlKvvpxeOE8njhbUanbRwr3z8DyzhICWnMtQeg==}
+
+  '@types/aos@3.0.8':
+    resolution: {integrity: sha512-Wydvt0OnVYO5YZxroBOYITIkAKtKmni9GUQRKuWMK3doplBSaHU11HIIweGwqF/ycmbHQGoLUQzuXFRVY+Ougg==}
 
   '@types/node@20.19.43':
     resolution: {integrity: sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==}
@@ -1252,6 +1258,8 @@ snapshots:
       '@tailwindcss/oxide': 4.3.3
       postcss: 8.5.25
       tailwindcss: 4.3.3
+
+  '@types/aos@3.0.8': {}
 
   '@types/node@20.19.43':
     dependencies:
