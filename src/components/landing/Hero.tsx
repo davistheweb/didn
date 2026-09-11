@@ -18,13 +18,13 @@ export const Hero: React.FC = () => {
         </div>
         <div className="flex md:flex-row flex-col gap-4">
           <Link
-            href="#"
+            href="/contact"
             className="bg-custom-green flex items-center rounded-lg px-8 pt-[17.5px] pb-4.5 text-white"
           >
             Get Involved
           </Link>
           <Link
-            href="#"
+            href="gallery"
             className="flex px-8 pt-[17.5px] pb-4.5 text-white rounded-lg bg-custom-blue"
           >
             Explore Our Work
