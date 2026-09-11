@@ -72,4 +72,57 @@ declare global {
     href: string;
     icon: React.ComponentType<SVGProps<SVGSVGElement>>;
   }
+
+  interface IAboutValue {
+    title: string;
+    description: string;
+  }
+
+  interface IAboutGoal {
+    title: string;
+    description: string;
+  }
+
+  interface IAboutFocusArea {
+    title: string;
+    description: string;
+  }
+
+  interface IAboutApproachStage {
+    title: string;
+    description: string;
+  }
+
+  interface IAboutImpactStat {
+    value: number;
+    suffix?: string;
+    label: string;
+  }
+
+  interface ISdgAlignment {
+    id: number;
+    title: string;
+    color: string;
+  }
+
+  interface IOrgStructureLevel {
+    title: string;
+    description?: string;
+  }
+
+  interface IAboutMember {
+    name: string;
+    position: string;
+    bio?: string;
+    photo?: StaticImport;
+  }
+
+  interface ITeamMember {
+    slug: string;
+    name: string;
+    role: string;
+    photo: StaticImport;
+    bio: string[];
+    tags: string[];
+  }
 }

@@ -13,7 +13,7 @@ const navItems: INavItems[] = [
   },
   {
     title: "About Us",
-    link: "#",
+    link: "/about",
     dropdownItems: [
       {
         title: "Teams",
