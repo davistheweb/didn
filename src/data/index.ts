@@ -1,10 +1,10 @@
-import { ArticleImg1, ArticleImg2, ArticleImg3 } from "@/assets";
+import { GraduationCap, Leaf, Scale, UsersRound } from "lucide-react";
+import { BlogImg1, BlogImg2, BlogImg3 } from "@/assets";
 import Facebook from "@/components/icons/Facebook";
 import Instagram from "@/components/icons/Instagram";
 import Tiktok from "@/components/icons/Tiktok";
 import X from "@/components/icons/X";
 import Youtube from "@/components/icons/Youtube";
-import { GraduationCap, Leaf, Scale, UsersRound } from "lucide-react";
 
 const navItems: INavItems[] = [
   {
@@ -20,6 +20,10 @@ const navItems: INavItems[] = [
         link: "/teams",
       },
     ],
+  },
+    {
+    title: "Blog",
+    link: "/blog",
   },
   {
     title: "Programs",
@@ -57,11 +61,11 @@ const focusAreas: IFocusAreas[] = [
   },
 ];
 
-const articles: IArticle[] = [
+const blogs: IBlog[] = [
   {
     title: "Leveraging Technology for Crime Prevention in Bayelsa Communities",
     category: "Legal Services",
-    image: ArticleImg1,
+    image: BlogImg1,
     date: "August 9, 2026",
     href: "/research-policy-citizen-action/leveraging-technology-for-crime-prevention-in-bayelsa-communities",
   },
@@ -69,7 +73,7 @@ const articles: IArticle[] = [
     title:
       "What Happened at the 3rd Africa High-Level Civil Society AML/CFT Conference 2026?",
     category: "Defending the Civic Space",
-    image: ArticleImg2,
+    image: BlogImg2,
     date: "August 9, 2026",
     href: "/research-policy-citizen-action/what-happened-at-the-3rd-africa-high-level-civil-society-aml-cft-conference-2026",
   },
@@ -77,7 +81,7 @@ const articles: IArticle[] = [
     title:
       "How the PCPS Project Is Improving Safety and Resilience in Bayelsa Communities",
     category: "Defending the Civic Space",
-    image: ArticleImg3,
+    image: BlogImg3,
     date: "August 8, 2026",
     href: "/research-policy-citizen-action/how-the-pcps-project-is-improving-safety-and-resilience-in-bayelsa-communities",
   },
@@ -164,11 +168,4 @@ const legalLinks: IFooterLink[] = [
   { label: "Legal", href: "/legal" },
 ];
 
-export {
-  articles,
-  focusAreas,
-  footerColumns,
-  legalLinks,
-  navItems,
-  socialLinks,
-};
+export { blogs, focusAreas, footerColumns, legalLinks, navItems, socialLinks };

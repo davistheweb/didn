@@ -44,7 +44,7 @@ declare global {
     icon: LucideIcon;
   }
 
-  interface IArticle {
+  interface IBlog {
     title: string;
     category: string;
     image: StaticImport;

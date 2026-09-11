@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import type React from "react";
 
-interface ArticleCardProps {
-  article: IArticle;
+interface BlogCardProps {
+  blog: IBlog;
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
-  const { title, category, image, date, href } = article;
+export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
+  const { title, category, image, date, href } = blog;
 
   return (
     <article className="group flex w-full flex-col overflow-hidden rounded-md border border-gray-200 bg-white transition-shadow duration-300 hover:shadow-lg">

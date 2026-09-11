@@ -1,10 +1,10 @@
-import { articles } from "@/data";
+import type React from "react";
+import { blogs } from "@/data";
 import { nunitoFont, rubikFont } from "@/lib/font";
-import React from "react";
-import { ArticleCard } from "../ui/Articlecard";
+import { BlogCard } from "../ui/Blogcard";
 import { Headline } from "../ui/Headline";
 
-export const ArticlesSection: React.FC = () => {
+export const BlogSection: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-start gap-8 px-8 py-15">
       <div>
@@ -15,7 +15,7 @@ export const ArticlesSection: React.FC = () => {
         <h1
           className={`w-full text-center text-xl font-medium md:text-3xl ${nunitoFont.className}`}
         >
-          Articles
+          Blogs
         </h1>
 
         <p className={`${rubikFont.className} text-center md:w-137.5`}>
@@ -25,8 +25,8 @@ export const ArticlesSection: React.FC = () => {
       </div>
 
       <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article, _i) => (
-          <ArticleCard key={_i} article={article} />
+        {blogs.map((blog, _i) => (
+          <BlogCard key={_i} blog={blog} />
         ))}
       </div>
     </section>
