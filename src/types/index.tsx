@@ -1,6 +1,6 @@
-import type { StaticImageData } from "next/image";
 import type { LucideIcon } from "lucide-react";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import type { StaticImageData } from "next/image";
 import type { ComponentType, SVGProps } from "react";
 
 declare global {
@@ -146,5 +146,22 @@ declare global {
     description?: string;
     media: GalleryMedia[];
     coverImage: Extract<GalleryMedia, { type: "image" }>;
+  }
+
+  interface IProgramFeaturedProject {
+    title: string;
+    description?: string;
+    gallerySlug: string;
+  }
+
+  interface IProgram {
+    id: string;
+    number: string;
+    title: string;
+    description: string;
+    areas: string[];
+    image: StaticImageData;
+    imageAlt: string;
+    featuredProject?: IProgramFeaturedProject;
   }
 }
