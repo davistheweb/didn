@@ -1,5 +1,4 @@
 import { GraduationCap, Leaf, Scale, UsersRound } from "lucide-react";
-import { BlogImg1, BlogImg2, BlogImg3 } from "@/assets";
 import Facebook from "@/components/icons/Facebook";
 import Instagram from "@/components/icons/Instagram";
 import Tiktok from "@/components/icons/Tiktok";
@@ -28,6 +27,10 @@ const navItems: INavItems[] = [
   {
     title: "Programs",
     link: "/programs",
+  },
+  {
+    title: "Events",
+    link: "/events",
   },
   { title: "Gallery", link: "/gallery" },
   // { title: "Blog", link: "/blog" },
@@ -58,32 +61,6 @@ const focusAreas: IFocusAreas[] = [
     description:
       "Equipping young people with the skills, confidence, and leadership opportunities to create change.",
     icon: GraduationCap,
-  },
-];
-
-const blogs: IBlog[] = [
-  {
-    title: "Leveraging Technology for Crime Prevention in Bayelsa Communities",
-    category: "Legal Services",
-    image: BlogImg1,
-    date: "August 9, 2026",
-    href: "/research-policy-citizen-action/leveraging-technology-for-crime-prevention-in-bayelsa-communities",
-  },
-  {
-    title:
-      "What Happened at the 3rd Africa High-Level Civil Society AML/CFT Conference 2026?",
-    category: "Defending the Civic Space",
-    image: BlogImg2,
-    date: "August 9, 2026",
-    href: "/research-policy-citizen-action/what-happened-at-the-3rd-africa-high-level-civil-society-aml-cft-conference-2026",
-  },
-  {
-    title:
-      "How the PCPS Project Is Improving Safety and Resilience in Bayelsa Communities",
-    category: "Defending the Civic Space",
-    image: BlogImg3,
-    date: "August 8, 2026",
-    href: "/research-policy-citizen-action/how-the-pcps-project-is-improving-safety-and-resilience-in-bayelsa-communities",
   },
 ];
 
@@ -168,4 +145,4 @@ const legalLinks: IFooterLink[] = [
   { label: "Legal", href: "/legal" },
 ];
 
-export { blogs, focusAreas, footerColumns, legalLinks, navItems, socialLinks };
+export { focusAreas, footerColumns, legalLinks, navItems, socialLinks };

@@ -48,7 +48,7 @@ declare global {
   interface IBlog {
     title: string;
     category: string;
-    image: StaticImport;
+    image: StaticImport | string | null;
     date: string;
     href: string;
   }

@@ -1,10 +1,23 @@
+"use client";
+
+import { Newspaper } from "lucide-react";
 import type React from "react";
-import { blogs } from "@/data";
+import { usePosts } from "@/hooks/usePosts";
 import { nunitoFont, rubikFont } from "@/lib/font";
-import { BlogCard } from "../ui/Blogcard";
+import { BlogPostCard } from "../blog/BlogPostCard";
+import { CardGridSkeleton } from "../ui/AsyncStates";
 import { Headline } from "../ui/Headline";
 
 export const BlogSection: React.FC = () => {
+  const { data, isLoading, isError } = usePosts({
+    page: 1,
+    perPage: 3,
+    sortBy: "published_at",
+    sortDir: "desc",
+  });
+
+  const posts = data?.posts ?? [];
+
   return (
     <section className="flex w-full flex-col items-start gap-8 px-8 py-15">
       <div>
@@ -30,18 +43,31 @@ export const BlogSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {blogs.map((blog, _i) => (
-          <div
-            key={_i}
-            className="h-full"
-            data-aos="fade-up"
-            data-aos-delay={_i * 100}
-          >
-            <BlogCard blog={blog} />
-          </div>
-        ))}
-      </div>
+      {isLoading ? (
+        <CardGridSkeleton count={3} />
+      ) : isError ? (
+        <div className="flex w-full flex-col items-center justify-center gap-3 rounded-md border border-dashed border-gray-300 px-8 py-12 text-center">
+          <p className={`${rubikFont.className} text-sm text-gray-600`}>
+            We couldn&apos;t load the latest posts right now. Please check back
+            soon.
+          </p>
+        </div>
+      ) : posts.length === 0 ? (
+        <div className="flex w-full flex-col items-center justify-center gap-3 rounded-md border border-dashed border-gray-300 px-8 py-12 text-center">
+          <Newspaper size={36} className="text-custom-green" />
+          <p className={`${rubikFont.className} text-sm text-gray-600`}>
+            No posts yet. Check back soon for news from our work.
+          </p>
+        </div>
+      ) : (
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <div key={post.id} className="h-full">
+              <BlogPostCard post={post} />
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

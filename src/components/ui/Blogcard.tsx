@@ -1,3 +1,4 @@
+import { Images as ImagePlaceholder } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
@@ -12,13 +13,19 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <article className="group flex h-full w-full flex-col overflow-hidden rounded-md border border-gray-200 bg-white transition-shadow duration-300 hover:shadow-lg">
       <div className="relative h-56 w-full overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-[#0b2f66]">
+            <ImagePlaceholder size={48} className="text-white/25" />
+          </div>
+        )}
 
         <span className="absolute top-4 right-4 rounded-full bg-custom-green px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase">
           {category}

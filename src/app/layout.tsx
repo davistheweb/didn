@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { AOSInit } from "@/components/ui/AOSInit";
 import { Footer } from "@/components/ui/Footer";
 import { QuickContact } from "@/components/ui/QuickContact";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,11 +35,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="relative flex w-full max-w-506 flex-col items-center justify-center overflow-x-hidden">
-        <QuickContact />
-        <Navbar />
-        {children}
-        <Footer />
-        <AOSInit />
+        <Providers>
+          <QuickContact />
+          <Navbar />
+          {children}
+          <Footer />
+          <AOSInit />
+        </Providers>
       </body>
     </html>
   );
