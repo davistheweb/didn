@@ -12,6 +12,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base {
+  a,
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 @layer utilities {
   .bg-custom-green {
     background-color: var(--accent-color);
