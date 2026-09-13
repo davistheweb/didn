@@ -1,8 +1,9 @@
-import { ArrowRight, Building2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
-import { partnerSlotCount } from "@/data/about";
-import { poppinsFont, rubikFont } from "@/lib/font";
+import { partners } from "@/data/about";
+import { rubikFont } from "@/lib/font";
 import { Headline } from "../ui/Headline";
 
 export const Partners: React.FC = () => {
@@ -22,20 +23,23 @@ export const Partners: React.FC = () => {
         and partners who share a commitment to creating positive social impact.
       </p>
 
-      <div className="mt-8 grid w-full grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-        {Array.from({ length: partnerSlotCount }, (_, _i) => (
+      <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-6">
+        {partners.map((partner) => (
           <div
-            key={_i}
-            className="flex aspect-[2/1] items-center justify-center gap-2 rounded-md border border-gray-200 bg-white"
+            key={partner.name}
+            className="flex aspect-[2/1] w-[calc(50%-0.75rem)] items-center justify-center rounded-md border border-gray-200 bg-white p-4 transition-shadow duration-300 hover:shadow-md sm:w-56"
             data-aos="fade-up"
-            data-aos-delay={(_i % 4) * 75}
+            data-aos-delay="100"
           >
-            <Building2 size={20} className="text-gray-300" strokeWidth={1.5} />
-            <span
-              className={`${poppinsFont.className} text-xs font-medium tracking-widest text-gray-300 uppercase`}
-            >
-              Partner
-            </span>
+            <div className="relative h-full w-full">
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                fill
+                sizes="(min-width: 640px) 224px, 100vw"
+                className="object-contain"
+              />
+            </div>
           </div>
         ))}
       </div>

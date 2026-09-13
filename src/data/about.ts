@@ -1,4 +1,9 @@
-import { AmbIrohFaithful, PrinceEberechukwuUmelo } from "@/assets";
+import {
+  AmbIrohFaithful,
+  PrinceEberechukwuUmelo,
+  WidowAidLogo,
+  WorldClimateSchoolLogo,
+} from "@/assets";
 
 const storyParagraphs: string[] = [
   "Direct Impact Development Network was established with a commitment to move beyond promises and intentions toward tangible, measurable, and sustainable outcomes that improve lives and strengthen communities.",
@@ -218,7 +223,16 @@ const boardMembers: IAboutMember[] = [
   },
 ];
 
-const partnerSlotCount = 8;
+const partners: IPartner[] = [
+  {
+    name: "Widow Aid Foundation",
+    logo: WidowAidLogo,
+  },
+  {
+    name: "World Climate School",
+    logo: WorldClimateSchoolLogo,
+  },
+];
 
 export {
   aboutFocusAreas,
@@ -229,7 +243,7 @@ export {
   boardMembers,
   coreValues,
   orgStructure,
-  partnerSlotCount,
+  partners,
   sdgs,
   storyParagraphs,
   teamPreview,

@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["http://192.168.0.104:3000"],
   images: {
     remotePatterns: allowedImageHosts,
+    dangerouslyAllowLocalIP: true,
   },
 };
 

@@ -164,4 +164,9 @@ declare global {
     imageAlt: string;
     featuredProject?: IProgramFeaturedProject;
   }
+
+  interface IPartner {
+    name: string;
+    logo: StaticImport;
+  }
 }

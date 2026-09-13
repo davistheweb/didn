@@ -1,4 +1,4 @@
-import { AmbIrohFaithful, PrinceEberechukwuUmelo } from "@/assets";
+import { AmbIrohFaithful, OzumbaChimbuoyim, PrinceEberechukwuUmelo } from "@/assets";
 
 const teamMembers: ITeamMember[] = [
   {
@@ -24,6 +24,18 @@ const teamMembers: ITeamMember[] = [
       "Prince Eberechukwu Umelo is a public affairs professional and youth development advocate with expertise in administration, program coordination, stakeholder engagement, and community development.",
       "As Director of Administration at Direct Impact Development Network, he supports effective organizational management and drives initiatives that advance youth empowerment, sustainable development, climate action, and community impact.",
       "Prince Umelo is currently appointed as the Special Adviser on Youth Development to the Member Representing Nkwerre State Constituency in the Imo State House of Assembly. He is proudly Jewish.",
+    ],
+  },
+  {
+    slug: "ozumba-chimbuoyim",
+    name: "Ozumba Chimbuoyim",
+    role: "Public Relations & Communications",
+    photo: OzumbaChimbuoyim,
+    tags: ["Public Relations", "Mental Health", "Human Rights", "Public Speaking"],
+    bio: [
+      "Ozumba Chimbuoyim is a multi-talented Nigerian from and based in the South-Eastern region. He is a Public Servant, Event Planner, Public Relations Specialist, and Public Speaker.",
+      "His passion spans mental health advocacy, human rights, and politics. He holds a first degree in Psychology, a master's degree in Peace Studies and Conflict Resolution, and is on the verge of concluding a PhD in Peace Studies and Conflict Resolution.",
+      "His major goal is to impact as many lives as he can.",
     ],
   },
 ];

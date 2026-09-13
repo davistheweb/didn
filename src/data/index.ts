@@ -67,7 +67,7 @@ const focusAreas: IFocusAreas[] = [
 const socialLinks: ISocialLink[] = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://facebook.com/didnetwork",
     icon: Facebook,
   },
   {
