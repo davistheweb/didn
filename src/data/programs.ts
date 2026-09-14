@@ -6,12 +6,14 @@ import { getGalleryAlbum } from "@/data/gallery";
 const CLIMATE_CHANGE_SLUG =
   "presentation-of-imo-state-policy-on-climate-change-june-2025";
 const GIRL_CHILD_SLUG = "girl-child-empowerment-summit-2025";
+const FIGHT_INEQUALITY_SLUG = "fight-inequality";
 
 const albumCover = (slug: string): StaticImageData =>
   getGalleryAlbum(slug)?.coverImage.src ?? BackgroundImage;
 
 const climateAlbum = getGalleryAlbum(CLIMATE_CHANGE_SLUG);
 const girlChildAlbum = getGalleryAlbum(GIRL_CHILD_SLUG);
+const fightInequalityAlbum = getGalleryAlbum(FIGHT_INEQUALITY_SLUG);
 
 const programs: IProgram[] = [
   {
@@ -80,6 +82,27 @@ const programs: IProgram[] = [
       title: "Girl Child Empowerment Summit 2025",
       description: girlChildAlbum?.description,
       gallerySlug: GIRL_CHILD_SLUG,
+    },
+  },
+  {
+    id: "fight-inequality",
+    number: "05",
+    title: "Fight Inequality",
+    description:
+      "Raising awareness and sparking conversations on inequality in our communities through sensitization campaigns, outreach programs, and grassroots advocacy.",
+    areas: [
+      "Inequality Awareness",
+      "Social Justice",
+      "Community Sensitization",
+      "Advocacy & Policy",
+    ],
+    image: albumCover(FIGHT_INEQUALITY_SLUG),
+    imageAlt:
+      "Fight Inequality sensitization outreach at Imo State University Campus, Owerri",
+    featuredProject: {
+      title: "Fight Inequality — Imo State University Outreach",
+      description: fightInequalityAlbum?.description,
+      gallerySlug: FIGHT_INEQUALITY_SLUG,
     },
   },
 ];
