@@ -99,9 +99,10 @@ const footerColumns: IFooterColumn[] = [
       {
         links: [
           { label: "Home", href: "/" },
-          { label: "About Us", href: "/about-us" },
-          { label: "What We Do", href: "/what-we-do" },
-          { label: "Our Work", href: "/our-work" },
+          { label: "About Us", href: "/about" },
+          { label: "Teams", href: "/teams" },
+          { label: "Programs", href: "/programs" },
+          { label: "Blog", href: "/blog" },
           { label: "Events", href: "/events" },
           { label: "Gallery", href: "/gallery" },
         ],
@@ -112,13 +113,7 @@ const footerColumns: IFooterColumn[] = [
     title: "Get Involved",
     groups: [
       {
-        links: [
-          { label: "Volunteer", href: "/volunteer" },
-          { label: "Membership", href: "/membership" },
-          { label: "Internship", href: "/internship" },
-          { label: "Partner With Us", href: "/partner-with-us" },
-          { label: "Contact Us", href: "/contact-us" },
-        ],
+        links: [{ label: "Contact Us", href: "/contact" }],
       },
     ],
   },
@@ -127,8 +122,12 @@ const footerColumns: IFooterColumn[] = [
     groups: [
       {
         links: [
+          {
+            label: "directimpactnetwork@gmail.com",
+            href: "mailto:directimpactnetwork@gmail.com",
+          },
           { label: "info@didn.org", href: "mailto:info@didn.org" },
-          { label: "+234 900 000 0000", href: "tel:+2349000000000" },
+          { label: "+234 901 879 7128", href: "tel:+2349018797128" },
           {
             label: "Plot 127 Ihechuwa Street, MCC Owerri, Imo State, Nigeria",
             href: "https://maps.google.com/?q=Plot+127+Ihechuwa+Street,+MCC+Owerri,+Imo+State,+Nigeria",
