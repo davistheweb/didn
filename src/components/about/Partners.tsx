@@ -23,11 +23,11 @@ export const Partners: React.FC = () => {
         and partners who share a commitment to creating positive social impact.
       </p>
 
-      <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-6">
+      <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-8">
         {partners.map((partner) => (
           <div
             key={partner.name}
-            className="flex aspect-[2/1] w-[calc(50%-0.75rem)] items-center justify-center p-4 sm:w-56"
+            className="flex aspect-square w-48 items-center justify-center p-4 sm:w-64 lg:w-50"
             data-aos="fade-up"
             data-aos-delay="100"
           >
