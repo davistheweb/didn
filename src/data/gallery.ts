@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import fightInequalityVideo from "@/assets/gallery/Fight Inequality/IMG_5680.mp4";
 import { galleryAlbumTitles, galleryMedia } from "@/generated/gallery-media";
 
 interface GalleryAlbumOverrides {
@@ -17,6 +18,17 @@ const albumOverrides: Record<string, GalleryAlbumOverrides> = {
     description:
       "Highlights from the presentation of the Imo State Policy on Climate Change — a milestone in the state's commitment to environmental sustainability.",
   },
+  "fight-inequality": {
+    description:
+      'The "Fight Inequality" sensitization outreach at Imo State University Campus, Owerri — raising awareness and sparking conversations on inequality in our communities.',
+  },
+};
+
+const galleryVideoOverrides: Record<string, { src: string; title?: string }> = {
+  "fight-inequality": {
+    src: fightInequalityVideo,
+    title: "Fight Inequality — sensitization outreach",
+  },
 };
 
 const buildImageMedia = (
@@ -33,8 +45,21 @@ const buildAlbum = (slug: string): GalleryAlbum => {
   const overrides = albumOverrides[slug] ?? {};
   const title = overrides.title ?? galleryAlbumTitles[slug];
   const images = galleryMedia[slug] as StaticImageData[];
-  const media = buildImageMedia(title, images);
   const coverSource = images[overrides.coverIndex ?? 0];
+  const video = galleryVideoOverrides[slug];
+  const media: GalleryMedia[] = [
+    ...buildImageMedia(title, images),
+    ...(video
+      ? [
+          {
+            type: "video" as const,
+            src: video.src,
+            title: video.title,
+            thumbnail: coverSource,
+          },
+        ]
+      : []),
+  ];
 
   return {
     slug,

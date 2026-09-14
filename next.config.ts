@@ -29,6 +29,16 @@ const nextConfig: NextConfig = {
     remotePatterns: allowedImageHosts,
     dangerouslyAllowLocalIP: true,
   },
+  turbopack: {
+    rules: {
+      "*.mp4": {
+        type: "asset",
+        condition: {
+          path: /src\/assets\/gallery/,
+        },
+      },
+    },
+  },
 };
 
 export default nextConfig;

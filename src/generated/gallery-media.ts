@@ -2,35 +2,45 @@
 /* Do not edit manually. */
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import media0 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/Background.jpg";
-import media1 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/co-img.jpg";
-import media2 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/GirlChildEmpowermentSummit.jpg";
-import media3 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0727.jpg";
-import media4 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0732.jpg";
-import media5 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0749.jpg";
-import media6 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0754.jpg";
-import media7 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0757.jpg";
-import media8 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0761.jpg";
-import media9 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0764.jpg";
-import media10 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0765.jpg";
-import media11 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0771.jpg";
-import media12 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0777.jpg";
-import media13 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0778.jpg";
-import media14 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0783.jpg";
-import media15 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0786.jpg";
-import media16 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0789.jpg";
-import media17 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/FB_IMG_1787024648947.jpg";
-import media18 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/groupimage.jpg";
-import media19 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/meeting.jpg";
+import media0 from "@/assets/gallery/Fight Inequality/photo_1_2026-09-14_10-23-38.jpg";
+import media1 from "@/assets/gallery/Fight Inequality/photo_2_2026-09-14_10-23-38.jpg";
+import media2 from "@/assets/gallery/Fight Inequality/photo_3_2026-09-14_10-23-38.jpg";
+import media3 from "@/assets/gallery/Fight Inequality/photo_4_2026-09-14_10-23-38.jpg";
+import media4 from "@/assets/gallery/Fight Inequality/photo_5_2026-09-14_10-23-38.jpg";
+import media5 from "@/assets/gallery/Fight Inequality/photo_6_2026-09-14_10-23-38.jpg";
+import media6 from "@/assets/gallery/Fight Inequality/photo_7_2026-09-14_10-23-38.jpg";
+import media7 from "@/assets/gallery/Fight Inequality/photo_8_2026-09-14_10-23-38.jpg";
+import media8 from "@/assets/gallery/Fight Inequality/photo_9_2026-09-14_10-23-38.jpg";
+import media9 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/Background.jpg";
+import media10 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/co-img.jpg";
+import media11 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/GirlChildEmpowermentSummit.jpg";
+import media12 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0727.jpg";
+import media13 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0732.jpg";
+import media14 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0749.jpg";
+import media15 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0754.jpg";
+import media16 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0757.jpg";
+import media17 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0761.jpg";
+import media18 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0764.jpg";
+import media19 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0765.jpg";
+import media20 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0771.jpg";
+import media21 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0777.jpg";
+import media22 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0778.jpg";
+import media23 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0783.jpg";
+import media24 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0786.jpg";
+import media25 from "@/assets/gallery/GIRL CHILD EMPOWERMENT SUMMIT 2025/IMG_0789.jpg";
+import media26 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/FB_IMG_1787024648947.jpg";
+import media27 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/groupimage.jpg";
+import media28 from "@/assets/gallery/PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025/meeting.jpg";
 
 export const galleryAlbumTitles: Record<string, string> = {
+  "fight-inequality": "Fight Inequality",
   "girl-child-empowerment-summit-2025": "GIRL CHILD EMPOWERMENT SUMMIT 2025",
   "presentation-of-imo-state-policy-on-climate-change-june-2025":
     "PRESENTATION OF IMO STATE POLICY ON CLIMATE CHANGE, JUNE 2025",
 };
 
 export const galleryMedia: Record<string, StaticImport[]> = {
-  "girl-child-empowerment-summit-2025": [
+  "fight-inequality": [
     media0,
     media1,
     media2,
@@ -40,6 +50,8 @@ export const galleryMedia: Record<string, StaticImport[]> = {
     media6,
     media7,
     media8,
+  ],
+  "girl-child-empowerment-summit-2025": [
     media9,
     media10,
     media11,
@@ -48,10 +60,19 @@ export const galleryMedia: Record<string, StaticImport[]> = {
     media14,
     media15,
     media16,
-  ],
-  "presentation-of-imo-state-policy-on-climate-change-june-2025": [
     media17,
     media18,
     media19,
+    media20,
+    media21,
+    media22,
+    media23,
+    media24,
+    media25,
+  ],
+  "presentation-of-imo-state-policy-on-climate-change-june-2025": [
+    media26,
+    media27,
+    media28,
   ],
 };
