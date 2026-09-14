@@ -130,8 +130,8 @@ const footerColumns: IFooterColumn[] = [
           { label: "info@didn.org", href: "mailto:info@didn.org" },
           { label: "+234 900 000 0000", href: "tel:+2349000000000" },
           {
-            label: "Office Address",
-            href: "https://maps.google.com/?q=Direct+Impact+Development+Network",
+            label: "Plot 127 Ihechuwa Street, MCC Owerri, Imo State, Nigeria",
+            href: "https://maps.google.com/?q=Plot+127+Ihechuwa+Street,+MCC+Owerri,+Imo+State,+Nigeria",
           },
         ],
       },
