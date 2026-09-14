@@ -27,7 +27,7 @@ export const Partners: React.FC = () => {
         {partners.map((partner) => (
           <div
             key={partner.name}
-            className="flex aspect-[2/1] w-[calc(50%-0.75rem)] items-center justify-center rounded-md border border-gray-200 bg-white p-4 transition-shadow duration-300 hover:shadow-md sm:w-56"
+            className="flex aspect-[2/1] w-[calc(50%-0.75rem)] items-center justify-center p-4 sm:w-56"
             data-aos="fade-up"
             data-aos-delay="100"
           >
