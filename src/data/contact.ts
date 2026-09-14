@@ -19,11 +19,12 @@ const contactEmails = [
 
 const officeLocation = {
   title: "Direct Impact Development Network",
-  line1: "Direct Impact Development Network",
-  line2: "Nigeria",
-  directionHref: "https://maps.google.com/?q=Direct+Impact+Development+Network",
+  line1: "Plot 127 Ihechuwa Street, MCC Owerri,",
+  line2: "Imo State, Nigeria",
+  directionHref:
+    "https://maps.google.com/?q=Plot+127+Ihechuwa+Street,+MCC+Owerri,+Imo+State,+Nigeria",
   embedUrl:
-    "https://www.google.com/maps?q=Direct+Impact+Development+Network&output=embed",
+    "https://www.google.com/maps?q=Plot+127+Ihechuwa+Street,+MCC+Owerri,+Imo+State,+Nigeria&output=embed",
 };
 
 export { contactEmails, contactPhone, officeLocation };
