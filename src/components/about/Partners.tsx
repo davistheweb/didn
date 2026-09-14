@@ -36,7 +36,7 @@ export const Partners: React.FC = () => {
                 src={partner.logo}
                 alt={partner.name}
                 fill
-                sizes="(min-width: 640px) 224px, 100vw"
+                sizes="(min-width: 640px) 300px, 100vw"
                 className="object-contain"
               />
             </div>
