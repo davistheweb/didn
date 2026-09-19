@@ -127,7 +127,8 @@ const footerColumns: IFooterColumn[] = [
             href: "mailto:directimpactnetwork@gmail.com",
           },
           { label: "info@didn.org", href: "mailto:info@didn.org" },
-          { label: "+234 901 879 7128", href: "tel:+2349018797128" },
+          { label: " +234 806 854 8731", href: "tel:+2348068548731" },
+          { label: " +234 902 550 3622", href: "tel:+2349025503622" },
           {
             label: "Plot 127 Ihechuwa Street, MCC Owerri, Imo State, Nigeria",
             href: "https://maps.google.com/?q=Plot+127+Ihechuwa+Street,+MCC+Owerri,+Imo+State,+Nigeria",

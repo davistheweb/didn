@@ -1,8 +1,8 @@
 const contactPhone = {
-  label: "+234 901 879 7128",
-  href: "tel:+2349018797128",
+  label: " +234 806 854 8731",
+  href: "tel:+2348068548731",
   note: "General inquiries",
-};
+};;;
 
 const contactEmails = [
   {
