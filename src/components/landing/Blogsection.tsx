@@ -21,7 +21,7 @@ export const BlogSection: React.FC = () => {
   const posts = data?.posts ?? [];
 
   return (
-    <section className="flex w-full flex-col items-start gap-8 px-8 py-15 lg:py-20">
+    <section className="flex w-full flex-col items-start gap-16 md:gap-8 px-8 py-15 lg:py-20">
       <div data-aos="fade-up">
         <Headline heading="/ BLOG & STORIES" title="LATEST FROM DIDN" />
       </div>
