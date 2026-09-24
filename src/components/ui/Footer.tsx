@@ -1,21 +1,45 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useState } from "react";
+import { toast } from "sonner";
 import { WhiteDIDNLogo } from "@/assets";
 import { footerColumns, socialLinks } from "@/data";
+import { subscribeNewsletter } from "@/services/newsletter";
 import { FooterColumn } from "./Footercolumn";
 import { Logo } from "./Logo";
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [isSubscribing, setIsSubscribing] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // handle newsletter submission
-    setEmail("");
+    const trimmedEmail = email.trim();
+
+    if (!EMAIL_PATTERN.test(trimmedEmail)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setIsSubscribing(true);
+    try {
+      const message = await subscribeNewsletter(trimmedEmail);
+      toast.success(message);
+      setEmail("");
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Unable to subscribe right now. Please try again.",
+      );
+    } finally {
+      setIsSubscribing(false);
+    }
   };
 
   return (
@@ -55,6 +79,7 @@ export const Footer: React.FC = () => {
           </p>
 
           <form
+            noValidate
             onSubmit={handleSubmit}
             className="flex items-center gap-2 rounded-md bg-black p-1.5 pl-4"
           >
@@ -69,10 +94,19 @@ export const Footer: React.FC = () => {
 
             <button
               type="submit"
-              className="bg-custom-blue flex cursor-pointer items-center gap-1 rounded-md px-4 py-2.5 text-sm font-medium whitespace-nowrap text-white transition-colors duration-200 hover:bg-[#0a428c]"
+              disabled={isSubscribing}
+              className="bg-custom-blue flex cursor-pointer items-center gap-1 rounded-md px-4 py-2.5 text-sm font-medium whitespace-nowrap text-white transition-colors duration-200 hover:bg-[#0a428c] disabled:cursor-not-allowed disabled:opacity-70"
             >
-              Submit
-              <ArrowRight className="h-4 w-4" />
+              {isSubscribing ? (
+                <>
+                  Subscribing... <Loader2 className="h-4 w-4 animate-spin" />
+                </>
+              ) : (
+                <>
+                  Submit
+                  <ArrowRight className="h-4 w-4" />
+                </>
+              )}
             </button>
           </form>
         </div>

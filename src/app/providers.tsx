@@ -3,6 +3,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type React from "react";
 import { useState } from "react";
+import { Toaster } from "sonner";
 
 interface ProvidersProps {
   children: React.ReactNode;
@@ -23,6 +24,9 @@ export const Providers: React.FC<ProvidersProps> = ({ children }) => {
   );
 
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      {children}
+      <Toaster position="top-right" richColors closeButton />
+    </QueryClientProvider>
   );
 };

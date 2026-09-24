@@ -23,9 +23,17 @@ export const resolveAssetUrl = (
 
 export const normalizeApiError = (error: unknown, fallback: string): Error => {
   if (axios.isAxiosError(error)) {
-    const message = (error.response?.data as { message?: string } | undefined)
-      ?.message;
-    if (message) return new Error(message);
+    const data = error.response?.data as
+      | {
+          message?: string;
+          errors?: Record<string, string[] | string>;
+        }
+      | undefined;
+    if (data?.errors && typeof data.errors === "object") {
+      const firstFieldError = Object.values(data.errors).flat().find(Boolean);
+      if (firstFieldError) return new Error(firstFieldError);
+    }
+    if (data?.message) return new Error(data.message);
   }
   return new Error(fallback);
 };

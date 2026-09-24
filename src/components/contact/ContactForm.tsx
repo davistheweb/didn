@@ -5,7 +5,7 @@ import { Loader2, Send } from "lucide-react";
 import { useState } from "react";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { z } from "zod";
 import { nunitoFont, poppinsFont, rubikFont } from "@/lib/font";
 import { submitContactForm } from "@/services/contact";
@@ -34,16 +34,21 @@ export const ContactForm: React.FC = () => {
   const onSubmit: SubmitHandler<ContactFormValues> = async (values) => {
     setIsSubmitting(true);
     try {
-      await submitContactForm(values);
-      toast.success("Message sent", {
-        description:
-          "Thank you for reaching out. The DIDN team will get back to you shortly.",
+      const message = await submitContactForm({
+        full_name: values.name,
+        phone_number: values.phone,
+        email: values.email,
+        message: values.message,
       });
+      toast.success(message);
       reset();
-    } catch {
-      toast.error("Something went wrong", {
-        description: "Please try again in a few minutes.",
-      });
+    } catch (error) {
+      toast.error(
+        error instanceof Error ? error.message : "Something went wrong",
+        {
+          description: "Please try again in a few minutes.",
+        },
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -173,8 +178,6 @@ export const ContactForm: React.FC = () => {
           </>
         )}
       </button>
-
-      <Toaster position="top-right" richColors closeButton />
     </form>
   );
 };
