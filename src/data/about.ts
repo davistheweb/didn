@@ -1,5 +1,7 @@
 import {
   AmbIrohFaithful,
+  ONikelTreasureEkwii,
+  OzumbaChimbuoyim,
   PrinceEberechukwuUmelo,
   WidowAidLogo,
   WorldClimateSchoolLogo,
@@ -202,6 +204,16 @@ const teamPreview: IAboutMember[] = [
     name: "Prince Eberechukwu Umelo",
     position: "Director of Administration",
     photo: PrinceEberechukwuUmelo,
+  },
+  {
+    name: "Ozumba Chimbuoyim",
+    position: "Public Relations & Communications",
+    photo: OzumbaChimbuoyim,
+  },
+  {
+    name: "O’Nikel Treasure Ekwii (PhD)",
+    position: "Director of Partnerships",
+    photo: ONikelTreasureEkwii,
   },
 ];
 
